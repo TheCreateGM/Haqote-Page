@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HaqotePad - Smart note-taking application with AI-powered assistance. Organize your thoughts with categories, tags, and intelligent insights from Google Gemini AI.">
-    <meta name="keywords" content="note-taking, AI assistant, productivity, organization, smart notes, Gemini AI">
-    <meta name="author" content="HaqotePad">
+    <meta name="description" content="HaqotePad - AI-Powered Modern Notes Application with Native Performance. Features wiki-style linking, enhanced markdown editing, multi-provider AI (OpenAI, Claude, Gemini, Cohere, Mistral), native C++/Rust/Go components, speech-to-text, and semantic search.">
+    <meta name="keywords" content="note-taking, AI assistant, wiki links, markdown editor, native performance, C++ Rust Go, semantic search, speech-to-text, OpenAI, Claude, Gemini, productivity, organization, smart notes, graph visualization">
+    <meta name="author" content="HaqotePad Team">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="HaqotePad - Smart Note-Taking with AI">
-    <meta property="og:description" content="Experience intelligent note-taking with AI-powered assistance, smart organization, and automated content generation.">
+    <meta property="og:title" content="HaqotePad - AI-Powered Modern Notes with Native Performance">
+    <meta property="og:description" content="Modern note-taking with Obsidian-inspired wiki links, native C++/Rust/Go performance, multi-provider AI support, enhanced markdown editing, and interactive graph visualization.">
+    <meta property="og:image" content="https://thecreategm.github.io/Haqote-Page/images/screenshots/og-image.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thecreategm.github.io/Haqote-Page/">
     
-    <title>HaqotePad - Smart Note-Taking with AI-Powered Assistance</title>
+    <title>HaqotePad - AI-Powered Modern Notes Application with Native Performance</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg">
-    <link rel="alternate icon" type="image/png" href="images/icons/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/icons/android-chrome-512x512.png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
@@ -27,6 +39,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -34,12 +49,7 @@
         <div class="container">
             <div class="nav-content">
                 <div class="logo">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="32" height="32" rx="8" fill="#2563EB"/>
-                        <path d="M12 10H20V12H12V10Z" fill="white"/>
-                        <path d="M12 15H20V17H12V15Z" fill="white"/>
-                        <path d="M12 20H17V22H12V20Z" fill="white"/>
-                    </svg>
+                    <img src="images/icons/favicon.svg" alt="HaqotePad Logo" width="32" height="32">
                     <span class="logo-text">HaqotePad</span>
                 </div>
                 <ul class="nav-links">
@@ -61,27 +71,27 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Smart Note-Taking with <span class="highlight">AI-Powered</span> Assistance</h1>
-                    <p class="hero-subtitle">Transform your thoughts into organized knowledge with HaqotePad. Experience intelligent note-taking powered by Google Gemini AI, with automated content generation and smart organization.</p>
+                <div class="hero-text" data-aos="fade-right">
+                    <h1 class="hero-title">Modern Notes with <span class="highlight">Native Performance</span> & AI</h1>
+                    <p class="hero-subtitle">Transform your thoughts into interconnected knowledge with HaqotePad. Featuring Obsidian-inspired <strong>wiki-style linking</strong>, native <strong>C++/Rust/Go performance</strong>, enhanced markdown editing, multi-provider AI (OpenAI, Claude, Gemini, Cohere, Mistral), and interactive graph visualization. <em>Latest Update: December 2025</em></p>
                     <div class="hero-buttons">
-                        <a href="#feedback" class="btn btn-primary">Try HaqotePad</a>
-                        <a href="#features" class="btn btn-secondary">Learn More</a>
+                        <a href="#feedback" class="btn btn-primary"><i class="bi bi-rocket-takeoff me-2"></i>Try HaqotePad</a>
+                        <a href="#features" class="btn btn-secondary"><i class="bi bi-info-circle me-2"></i>Learn More</a>
                     </div>
                 </div>
-                <div class="hero-image">
+                <div class="hero-image" data-aos="fade-left">
                     <div class="hero-card-demo">
                         <div class="demo-card">
                             <div class="card-header">
-                                <span class="card-category ideas">💡 Ideas</span>
-                                <span class="card-date">2 hours ago</span>
+                                <span class="card-category ideas"><i class="bi bi-lightbulb-fill me-1"></i>Ideas</span>
+                                <span class="card-date"><i class="bi bi-clock me-1"></i>2 hours ago</span>
                             </div>
                             <h3 class="card-title">Project Brainstorming Session</h3>
                             <p class="card-excerpt">Innovative concepts for the next quarter including AI integration and user experience enhancements...</p>
                             <div class="card-footer">
-                                <span class="card-tag">#innovation</span>
-                                <span class="card-tag">#planning</span>
-                                <span class="card-words">234 words</span>
+                                <span class="card-tag"><i class="bi bi-hash"></i>innovation</span>
+                                <span class="card-tag"><i class="bi bi-hash"></i>planning</span>
+                                <span class="card-words"><i class="bi bi-file-text me-1"></i>234 words</span>
                             </div>
                         </div>
                     </div>
@@ -99,79 +109,115 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Powerful Features for Modern Note-Taking</h2>
-                <p class="section-subtitle">Everything you need to capture, organize, and amplify your ideas</p>
+                <p class="section-subtitle">Everything you need to capture, organize, and amplify your ideas with native performance</p>
             </div>
             <div class="features-grid">
-                <div class="feature-card">
+                <!-- Native Performance -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="50">
                     <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="24" cy="24" r="20" fill="#EEF2FF"/>
-                            <path d="M24 14L26.472 21.528L34 24L26.472 26.472L24 34L21.528 26.472L14 24L21.528 21.528L24 14Z" fill="#2563EB"/>
-                        </svg>
+                        <i class="bi bi-lightning-charge-fill fs-1" style="color: #DC2626;"></i>
                     </div>
-                    <h3 class="feature-title">AI-Powered Assistant</h3>
-                    <p class="feature-description">Get intelligent insights, summaries, and analysis of your notes using Google Gemini AI. Ask questions, request summaries, and get creative suggestions.</p>
+                    <h3 class="feature-title">⚡ Native Performance</h3>
+                    <p class="feature-description">C++ storage engine (10x faster), Rust memory manager (95% cache hit rate), and Go search engine (sub-50ms queries). Automatic fallback to Python-only mode when unavailable.</p>
                 </div>
                 
-                <div class="feature-card">
+                <!-- Wiki Links -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="24" cy="24" r="20" fill="#FEF3C7"/>
-                            <rect x="16" y="16" width="16" height="3" rx="1.5" fill="#F59E0B"/>
-                            <rect x="16" y="22" width="16" height="3" rx="1.5" fill="#F59E0B"/>
-                            <rect x="16" y="28" width="10" height="3" rx="1.5" fill="#F59E0B"/>
-                        </svg>
+                        <i class="bi bi-diagram-3-fill fs-1" style="color: #7C3AED;"></i>
                     </div>
-                    <h3 class="feature-title">Smart Organization</h3>
-                    <p class="feature-description">Organize notes with categories, tags, and advanced search capabilities. Find exactly what you need when you need it with powerful filtering options.</p>
+                    <h3 class="feature-title">🔗 Obsidian-Style Wiki Links</h3>
+                    <p class="feature-description">Create interconnected notes with [[Note Title]] syntax. Features autocomplete, backlinks, graph visualization, and multiple link formats including aliases and headings.</p>
                 </div>
                 
-                <div class="feature-card">
+                <!-- Enhanced Markdown -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
                     <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="24" cy="24" r="20" fill="#DBEAFE"/>
-                            <path d="M24 16V24L30 28" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
-                        </svg>
+                        <i class="bi bi-markdown-fill fs-1 text-primary"></i>
                     </div>
-                    <h3 class="feature-title">Automated Note Creation</h3>
-                    <p class="feature-description">Create notes automatically with intelligent content generation. Let AI help you expand on ideas and generate structured content effortlessly.</p>
+                    <h3 class="feature-title">📝 Enhanced Markdown Editor</h3>
+                    <p class="feature-description">Advanced syntax highlighting, live preview with wiki link resolution, split-pane editing, synchronized scrolling, and comprehensive formatting toolbar.</p>
                 </div>
                 
-                <div class="feature-card">
+                <!-- Multi-Provider AI -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="24" cy="24" r="20" fill="#FEE2E2"/>
-                            <rect x="14" y="18" width="8" height="12" rx="2" fill="#EF4444"/>
-                            <rect x="26" y="14" width="8" height="16" rx="2" fill="#F87171"/>
-                        </svg>
+                        <i class="bi bi-stars fs-1 text-warning"></i>
                     </div>
-                    <h3 class="feature-title">Multi-Category Support</h3>
-                    <p class="feature-description">Organize your thoughts across Ideas, Personal, Research, and Work categories. Each category with its own color coding for easy visual identification.</p>
+                    <h3 class="feature-title">🤖 Multi-Provider AI</h3>
+                    <p class="feature-description">Support for OpenAI GPT, Anthropic Claude, Google Gemini, Cohere, and Mistral AI. Context-aware assistance, summaries, and content enhancement with AES-256 encrypted API keys.</p>
                 </div>
                 
-                <div class="feature-card">
+                <!-- Voice Features -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="250">
                     <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="24" cy="24" r="20" fill="#D1FAE5"/>
-                            <rect x="14" y="20" width="12" height="3" rx="1.5" fill="#10B981"/>
-                            <rect x="14" y="26" width="16" height="3" rx="1.5" fill="#10B981"/>
-                            <path d="M28 18L30 20L34 16" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <i class="bi bi-mic-fill fs-1 text-danger"></i>
                     </div>
-                    <h3 class="feature-title">Real-time AI Chat</h3>
-                    <p class="feature-description">Chat with AI about your notes, request summaries, and get instant insights. Your personal AI assistant is always ready to help you think better.</p>
+                    <h3 class="feature-title">🎤 Speech-to-Text & TTS</h3>
+                    <p class="feature-description">Real-time voice transcription with microphone input. Text-to-speech to listen to your notes. Full audio processing with background threading.</p>
                 </div>
                 
-                <div class="feature-card">
+                <!-- Semantic Search -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="24" cy="24" r="20" fill="#F3E8FF"/>
-                            <circle cx="24" cy="24" r="8" stroke="#9333EA" stroke-width="3"/>
-                            <path d="M24 16V12M24 36V32M32 24H36M12 24H16" stroke="#9333EA" stroke-width="3" stroke-linecap="round"/>
-                        </svg>
+                        <i class="bi bi-search-heart fs-1 text-info"></i>
                     </div>
-                    <h3 class="feature-title">Advanced Search & Filters</h3>
-                    <p class="feature-description">Find exactly what you need with powerful search and filtering options. Search by content, tags, categories, or dates with lightning-fast results.</p>
+                    <h3 class="feature-title">🧠 AI Semantic Search</h3>
+                    <p class="feature-description">Find notes by meaning, not just keywords. Uses sentence transformers for intelligent context-aware search with vector embeddings.</p>
+                </div>
+                
+                <!-- Graph Visualization -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="feature-icon">
+                        <i class="bi bi-share-fill fs-1 text-success"></i>
+                    </div>
+                    <h3 class="feature-title">🕸️ Interactive Graphs</h3>
+                    <p class="feature-description">Visualize note relationships with interactive force-directed, hierarchical, and circular graph layouts. Click nodes to navigate between linked notes.</p>
+                </div>
+                
+                <!-- Backlinks -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="bi bi-arrow-left-right fs-1" style="color: #059669;"></i>
+                    </div>
+                    <h3 class="feature-title">↔️ Comprehensive Backlinks</h3>
+                    <p class="feature-description">Automatic bidirectional link detection. See all notes linking to current note with context previews and orphan note detection.</p>
+                </div>
+                
+                <!-- Table Calculations -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="feature-icon">
+                        <i class="bi bi-table fs-1" style="color: #EA580C;"></i>
+                    </div>
+                    <h3 class="feature-title">🧮 Excel-Like Tables</h3>
+                    <p class="feature-description">Built-in spreadsheet functionality with formulas (SUM, AVERAGE, MIN, MAX), cell references (A1, B2), and dynamic calculations in preview mode.</p>
+                </div>
+                
+                <!-- Smart Organization -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="bi bi-collection fs-1" style="color: #8B5CF6;"></i>
+                    </div>
+                    <h3 class="feature-title">🗂️ Smart Organization</h3>
+                    <p class="feature-description">Categories, tags, advanced search, smart thumbnails with caching, and hierarchical category navigation with filtering integration.</p>
+                </div>
+                
+                <!-- Theme Switching -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="feature-icon">
+                        <i class="bi bi-moon-stars-fill fs-1" style="color: #3B82F6;"></i>
+                    </div>
+                    <h3 class="feature-title">🌙 Light/Dark Themes</h3>
+                    <p class="feature-description">Seamless theme switching with persistent preferences. Professional themes applied to all UI elements and note cards.</p>
+                </div>
+                
+                <!-- Security -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="bi bi-shield-lock-fill fs-1 text-danger"></i>
+                    </div>
+                    <h3 class="feature-title">🛡️ Enhanced Security</h3>
+                    <p class="feature-description">AES-256 encryption for API keys, cross-platform keychain integration, secure configuration management, and key validation with usage tracking.</p>
                 </div>
             </div>
         </div>
@@ -185,35 +231,185 @@
                 <p class="section-subtitle">Simple, intuitive, and powerful workflow</p>
             </div>
             <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">1</div>
+                <div class="step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number"><i class="bi bi-pencil-square"></i></div>
                     <div class="step-content">
                         <h3 class="step-title">Create & Organize</h3>
                         <p class="step-description">Create notes and organize them across multiple categories - Ideas, Personal, Research, and Work. Use tags for even more granular organization.</p>
                     </div>
                 </div>
                 
-                <div class="step">
-                    <div class="step-number">2</div>
+                <div class="step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number"><i class="bi bi-tags"></i></div>
                     <div class="step-content">
                         <h3 class="step-title">Tag & Categorize</h3>
                         <p class="step-description">Apply tags and categories to your notes for easy retrieval. Build a personal knowledge system that grows with you.</p>
                     </div>
                 </div>
                 
-                <div class="step">
-                    <div class="step-number">3</div>
+                <div class="step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number"><i class="bi bi-lightbulb"></i></div>
                     <div class="step-content">
                         <h3 class="step-title">AI-Enhanced Insights</h3>
                         <p class="step-description">Use the AI Assistant to analyze, summarize, and expand on your ideas. Get intelligent suggestions and creative perspectives.</p>
                     </div>
                 </div>
                 
-                <div class="step">
-                    <div class="step-number">4</div>
+                <div class="step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-number"><i class="bi bi-lightning"></i></div>
                     <div class="step-content">
                         <h3 class="step-title">Access Instantly</h3>
                         <p class="step-description">Find your organized knowledge instantly with advanced search and filtering. Your second brain is always at your fingertips.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Native Performance Architecture Section -->
+    <section class="native-architecture" style="background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">⚡ Native Performance Architecture</h2>
+                <p class="section-subtitle">Multi-language architecture combining Python flexibility with native performance</p>
+            </div>
+            <div class="row g-4">
+                <!-- C++ Storage Engine -->
+                <div class="col-md-4">
+                    <div class="feature-card h-100" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">
+                            <i class="bi bi-database-fill-gear fs-1" style="color: #DC2626;"></i>
+                        </div>
+                        <h3 class="feature-title">💾 C++ Storage Engine</h3>
+                        <ul class="list-unstyled" style="color: var(--color-gray-600); line-height: 1.8;">
+                            <li><strong>10x faster</strong> batch operations</li>
+                            <li>LZ4 compression for efficiency</li>
+                            <li>Memory-mapped I/O</li>
+                            <li>Connection pooling</li>
+                            <li>WAL mode for concurrency</li>
+                            <li>Custom embedding indexes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Rust Memory Manager -->
+                <div class="col-md-4">
+                    <div class="feature-card h-100" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <i class="bi bi-memory fs-1" style="color: #F97316;"></i>
+                        </div>
+                        <h3 class="feature-title">🧠 Rust Memory Manager</h3>
+                        <ul class="list-unstyled" style="color: var(--color-gray-600); line-height: 1.8;">
+                            <li><strong>95% cache hit rate</strong></li>
+                            <li>ML-based predictive eviction</li>
+                            <li>Zero-copy operations</li>
+                            <li>Thread-safe Arc&lt;RwLock&gt;</li>
+                            <li>Real-time cache updates</li>
+                            <li>Memory-efficient storage</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Go Search Engine -->
+                <div class="col-md-4">
+                    <div class="feature-card h-100" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <i class="bi bi-search fs-1" style="color: #0EA5E9;"></i>
+                        </div>
+                        <h3 class="feature-title">🔍 Go Search Engine</h3>
+                        <ul class="list-unstyled" style="color: var(--color-gray-600); line-height: 1.8;">
+                            <li><strong>Sub-50ms</strong> search times</li>
+                            <li>Full-text inverted index</li>
+                            <li>TF-IDF ranking</li>
+                            <li>Fuzzy search support</li>
+                            <li>Real-time index updates</li>
+                            <li>Concurrent goroutines</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4" data-aos="fade-up">
+                <p style="color: var(--color-gray-600); font-size: 1.1rem;">
+                    <i class="bi bi-info-circle me-2"></i>
+                    <strong>Graceful Degradation:</strong> Automatic fallback to Python-only mode when native components are unavailable
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section class="tech-stack" style="background: var(--color-white); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🛠️ Technology Stack</h2>
+                <p class="section-subtitle">Built with modern technologies for maximum performance and reliability</p>
+            </div>
+            <div class="row g-4">
+                <!-- Core Technologies -->
+                <div class="col-lg-6">
+                    <div class="feature-card" data-aos="fade-right">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                            <i class="bi bi-code-square me-2"></i>Core Technologies
+                        </h4>
+                        <div style="display: grid; gap: 0.75rem;">
+                            <div><strong>Python 3.8+:</strong> Main application framework</div>
+                            <div><strong>PySide6 (Qt):</strong> Cross-platform GUI</div>
+                            <div><strong>C++17:</strong> High-performance storage engine</div>
+                            <div><strong>Rust:</strong> Memory-safe caching system</div>
+                            <div><strong>Go:</strong> Concurrent search engine</div>
+                            <div><strong>SQLite:</strong> Embedded database</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI & ML -->
+                <div class="col-lg-6">
+                    <div class="feature-card" data-aos="fade-left">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                            <i class="bi bi-robot me-2"></i>AI & Machine Learning
+                        </h4>
+                        <div style="display: grid; gap: 0.75rem;">
+                            <div><strong>OpenAI:</strong> GPT-4, GPT-3.5-turbo</div>
+                            <div><strong>Anthropic:</strong> Claude-3 models</div>
+                            <div><strong>Google:</strong> Gemini Pro, Flash</div>
+                            <div><strong>Cohere:</strong> Command models</div>
+                            <div><strong>Mistral AI:</strong> Mistral models</div>
+                            <div><strong>Sentence Transformers:</strong> Semantic search</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Libraries & Tools -->
+                <div class="col-lg-6">
+                    <div class="feature-card" data-aos="fade-right">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                            <i class="bi bi-box-seam me-2"></i>Key Libraries
+                        </h4>
+                        <div style="display: grid; gap: 0.75rem;">
+                            <div><strong>Markdown:</strong> Content rendering</div>
+                            <div><strong>PyMdown Extensions:</strong> Enhanced MD</div>
+                            <div><strong>SpeechRecognition:</strong> Voice input</div>
+                            <div><strong>pyttsx3:</strong> Text-to-speech</div>
+                            <div><strong>Keyring:</strong> Secure storage</div>
+                            <div><strong>Cryptography:</strong> AES-256 encryption</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Build & Deploy -->
+                <div class="col-lg-6">
+                    <div class="feature-card" data-aos="fade-left">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                            <i class="bi bi-tools me-2"></i>Build & Deployment
+                        </h4>
+                        <div style="display: grid; gap: 0.75rem;">
+                            <div><strong>CMake:</strong> C++ build system</div>
+                            <div><strong>Cargo:</strong> Rust package manager</div>
+                            <div><strong>Go Modules:</strong> Dependency management</div>
+                            <div><strong>PyInstaller:</strong> Binary packaging</div>
+                            <div><strong>GitHub Actions:</strong> CI/CD pipeline</div>
+                            <div><strong>Auto-Installer:</strong> Smart dependency setup</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -228,55 +424,131 @@
                 <p class="section-subtitle">A glimpse into your future note-taking experience</p>
             </div>
             <div class="preview-grid">
-                <div class="preview-item main-preview">
-                    <div class="preview-image-placeholder">
-                        <div class="placeholder-content">
-                            <div class="placeholder-sidebar">
-                                <div class="placeholder-logo"></div>
-                                <div class="placeholder-menu-item"></div>
-                                <div class="placeholder-menu-item"></div>
-                                <div class="placeholder-menu-item"></div>
-                            </div>
-                            <div class="placeholder-main">
-                                <div class="placeholder-header"></div>
-                                <div class="placeholder-cards">
-                                    <div class="placeholder-card"></div>
-                                    <div class="placeholder-card"></div>
-                                    <div class="placeholder-card"></div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="preview-item main-preview" data-aos="zoom-in">
+                    <div class="preview-image-container">
+                        <img src="images/screenshots/screenshot-main-interface.png" alt="HaqotePad Main Interface" class="preview-image shadow-lg rounded" loading="lazy">
                     </div>
-                    <h3 class="preview-title">Main Interface</h3>
+                    <h3 class="preview-title"><i class="bi bi-grid-3x3-gap me-2"></i>Main Interface</h3>
                     <p class="preview-description">Clean, organized card-based layout with category filtering and search</p>
                 </div>
                 
-                <div class="preview-item">
-                    <div class="preview-image-placeholder ai-preview">
-                        <div class="ai-chat-bubble">
-                            <div class="bubble-line"></div>
-                            <div class="bubble-line short"></div>
-                        </div>
-                        <div class="ai-response">
-                            <div class="bubble-line"></div>
-                            <div class="bubble-line"></div>
-                            <div class="bubble-line short"></div>
-                        </div>
+                <div class="preview-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="preview-image-container">
+                        <img src="images/screenshots/screenshot-ai-assistant.png" alt="HaqotePad AI Assistant" class="preview-image shadow rounded" loading="lazy">
                     </div>
-                    <h3 class="preview-title">AI Assistant</h3>
+                    <h3 class="preview-title"><i class="bi bi-robot me-2"></i>AI Assistant</h3>
                     <p class="preview-description">Real-time chat with intelligent insights and summaries</p>
                 </div>
                 
-                <div class="preview-item">
-                    <div class="preview-image-placeholder categories-preview">
-                        <div class="category-tag ideas-tag">💡 Ideas</div>
-                        <div class="category-tag personal-tag">👤 Personal</div>
-                        <div class="category-tag research-tag">🔬 Research</div>
-                        <div class="category-tag work-tag">💼 Work</div>
+                <div class="preview-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="preview-image-container">
+                        <img src="images/screenshots/screenshot-wiki-links.png" alt="HaqotePad Wiki Links" class="preview-image shadow rounded" loading="lazy">
                     </div>
-                    <h3 class="preview-title">Smart Categories</h3>
-                    <p class="preview-description">Organize across multiple categories with visual color coding</p>
+                    <h3 class="preview-title"><i class="bi bi-link-45deg me-2"></i>Wiki-Style Links</h3>
+                    <p class="preview-description">Connect notes with wiki-style links for better knowledge management</p>
                 </div>
+                
+                <div class="preview-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="preview-image-container">
+                        <img src="images/screenshots/screenshot-dark-theme.png" alt="HaqotePad Dark Theme" class="preview-image shadow rounded" loading="lazy">
+                    </div>
+                    <h3 class="preview-title"><i class="bi bi-moon-stars-fill me-2"></i>Dark Theme</h3>
+                    <p class="preview-description">Beautiful dark mode for comfortable nighttime note-taking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team & Project Information Section -->
+    <section class="team-section" style="background: var(--color-white); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">👥 Meet the Team</h2>
+                <p class="section-subtitle">Built with passion by a dedicated team of developers</p>
+            </div>
+            
+            <!-- Project Info -->
+            <div class="text-center mb-5" data-aos="fade-up">
+                <div class="feature-card" style="max-width: 800px; margin: 0 auto;">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                        <i class="bi bi-calendar-check me-2"></i>Project Timeline
+                    </h4>
+                    <p style="color: var(--color-gray-700); font-size: 1.1rem;">
+                        <strong>Started:</strong> August 8, 2025 (Friday)<br>
+                        <strong>Latest Major Update:</strong> October 2025<br>
+                        <strong>Repository:</strong> <a href="https://github.com/TheCreateGM/Haqote-Pad" target="_blank" rel="noopener noreferrer" style="color: var(--primary-blue);">github.com/TheCreateGM/Haqote-Pad</a><br>
+                        <strong>Note:</strong> The project is still in development and may have bugs or limitations. Use at your own risk. Also the project code not publish yet to view.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Core Team -->
+                <div class="col-12">
+                    <div class="feature-card" data-aos="fade-up">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1.5rem;">
+                            <i class="bi bi-people-fill me-2"></i>Core Team Members
+                        </h4>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
+                            <a href="https://github.com/TheCreateGM" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">
+                                <i class="bi bi-github me-2"></i>TheCreateGM
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Supervisor -->
+                <div class="col-lg-6">
+                    <div class="feature-card h-100" data-aos="fade-right">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1.5rem;">
+                            <i class="bi bi-person-badge me-2"></i>Project Supervisor
+                        </h4>
+                        <div class="text-center">
+                            <a href="https://github.com/rkenshin77" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-lg">
+                                <i class="bi bi-github me-2"></i>rkenshin77
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Collaborators -->
+                <div class="col-lg-6">
+                    <div class="feature-card h-100" data-aos="fade-left">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1.5rem;">
+                            <i class="bi bi-star-fill me-2"></i>Collaborators
+                        </h4>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center">
+                            <a href="https://github.com/Shivanand-Prabhu" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+                                <i class="bi bi-github me-1"></i>Shivanand-Prabhu
+                            </a>
+                            <a href="https://github.com/brightcity87" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+                                <i class="bi bi-github me-1"></i>brightcity87
+                            </a>
+                            <a href="https://github.com/Rughena" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+                                <i class="bi bi-github me-1"></i>Rughena
+                            </a>
+                            <a href="https://github.com/QuackersNCheese" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+                                <i class="bi bi-github me-1"></i>QuackersNCheese
+                            </a>
+                            <a href="https://github.com/mangopulp1" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+                                <i class="bi bi-github me-1"></i>mangopulp1
+                            </a>
+                            <a href="https://github.com/TheAsp121q" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+                                <i class="bi bi-github me-1"></i>TheAsp121q
+                            </a>
+                            <a href="https://github.com/notim66" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+                                <i class="bi bi-github me-1"></i>notim66
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4" data-aos="fade-up">
+                <p style="color: var(--color-gray-600); font-size: 1.1rem;">
+                    <i class="bi bi-heart-fill text-danger me-2"></i>
+                    <strong>Open Source Project:</strong> Check out our code on <a href="https://github.com/TheCreateGM/Haqote-Pad" target="_blank" rel="noopener noreferrer" style="color: var(--primary-blue);">GitHub</a>
+                </p>
             </div>
         </div>
     </section>
@@ -284,13 +556,40 @@
     <!-- Call to Action Section -->
     <section class="cta-section">
         <div class="container">
-            <div class="cta-content">
+            <div class="cta-content" data-aos="fade-up">
                 <h2 class="cta-title">Experience HaqotePad Today</h2>
-                <p class="cta-description">Ready to transform your note-taking experience? Try HaqotePad and discover how AI can enhance your productivity and creativity.</p>
-                <div class="cta-buttons">
-                    <a href="#feedback" class="btn btn-primary btn-large">Get Started</a>
-                    <a href="#features" class="btn btn-secondary btn-large">Explore Features</a>
+                <p class="cta-description">Ready to transform your note-taking experience? Try HaqotePad and discover how native performance and AI can enhance your productivity and creativity.</p>
+                
+                <!-- Quick Start Commands -->
+                <div class="feature-card" style="max-width: 700px; margin: 2rem auto; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+                    <h4 style="color: white; margin-bottom: 1rem;">
+                        <i class="bi bi-terminal me-2"></i>Quick Start
+                    </h4>
+                    <div style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 0.5rem; font-family: 'Courier New', monospace; text-align: left; color: white;">
+                        <code style="display: block; margin-bottom: 0.5rem;"># Clone the repository</code>
+                        <code style="display: block; margin-bottom: 0.5rem;">git clone https://github.com/TheCreateGM/Haqote-Pad.git</code>
+                        <code style="display: block; margin-bottom: 0.5rem;">cd Haqote-Pad</code>
+                        <code style="display: block; margin-top: 1rem;"># Run with auto-install (recommended)</code>
+                        <code style="display: block;">python noteapp.py</code>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.9); margin-top: 1rem; font-size: 0.95rem;">
+                        <i class="bi bi-info-circle me-2"></i>
+                        All dependencies install automatically on first run!
+                    </p>
                 </div>
+                
+                <div class="cta-buttons">
+                    <a href="https://github.com/TheCreateGM/Haqote-Page/releases" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                        <i class="bi bi-github me-2"></i>Get from GitHub
+                    </a>
+                    <a href="#features" class="btn btn-secondary btn-large">
+                        <i class="bi bi-compass me-2"></i>Explore Features
+                    </a>
+                </div>
+                
+                <p style="color: rgba(255,255,255,0.8); margin-top: 1.5rem; font-size: 1.1rem;">
+                    <strong>Supported Platforms:</strong> Windows • macOS • Linux (Python 3.8+)
+                </p>
             </div>
         </div>
     </section>
@@ -307,39 +606,25 @@
                     <h3>Why Your Feedback Matters</h3>
                     <ul class="feedback-list">
                         <li>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="#10B981" stroke-width="2"/>
-                                <path d="M8 12L11 15L16 9" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <i class="bi bi-check-circle-fill text-success fs-5"></i>
                             <span>Help us prioritize features that matter to you</span>
                         </li>
                         <li>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="#10B981" stroke-width="2"/>
-                                <path d="M8 12L11 15L16 9" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <i class="bi bi-check-circle-fill text-success fs-5"></i>
                             <span>Share your unique use cases and workflows</span>
                         </li>
                         <li>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="#10B981" stroke-width="2"/>
-                                <path d="M8 12L11 15L16 9" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <i class="bi bi-check-circle-fill text-success fs-5"></i>
                             <span>Report bugs and suggest improvements</span>
                         </li>
                         <li>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="#10B981" stroke-width="2"/>
-                                <path d="M8 12L11 15L16 9" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <i class="bi bi-check-circle-fill text-success fs-5"></i>
                             <span>Be part of building something amazing</span>
                         </li>
                     </ul>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfl09RzArNM4kR4DlTvz--VtWQ02BWlX4M6LFXSzbbqUq_hFw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
                         Provide Feedback
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
                 <div class="feedback-form-container">
@@ -370,15 +655,15 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="32" height="32" rx="8" fill="#2563EB"/>
-                            <path d="M12 10H20V12H12V10Z" fill="white"/>
-                            <path d="M12 15H20V17H12V15Z" fill="white"/>
-                            <path d="M12 20H17V22H12V20Z" fill="white"/>
-                        </svg>
+                        <img src="images/icons/favicon.svg" alt="HaqotePad Logo" width="32" height="32">
                         <span>HaqotePad</span>
                     </div>
-                    <p class="footer-description">Smart note-taking with AI-powered assistance. Transform your thoughts into organized knowledge.</p>
+                    <p class="footer-description">AI-Powered Modern Notes Application with Native Performance. Featuring wiki-style linking, C++/Rust/Go components, multi-provider AI support, and enhanced markdown editing.</p>
+                    <div class="mt-3">
+                        <a href="https://github.com/TheCreateGM/Haqote-Pad" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light">
+                            <i class="bi bi-github me-2"></i>View on GitHub
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="footer-section">
@@ -394,22 +679,32 @@
                 <div class="footer-section">
                     <h4 class="footer-heading">Resources</h4>
                     <ul class="footer-links">
-                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfl09RzArNM4kR4DlTvz--VtWQ02BWlX4M6LFXSzbbqUq_hFw/viewform" target="_blank" rel="noopener noreferrer">Feedback Form</a></li>
-                        <li><a href="https://github.com/TheCreateGM/Haqote-Page" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://github.com/TheCreateGM/Haqote-Pad" target="_blank" rel="noopener noreferrer"><i class="bi bi-github me-1"></i>Main Repository</a></li>
+                        <li><a href="https://github.com/TheCreateGM/Haqote-Pad/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="bi bi-file-text me-1"></i>Documentation</a></li>
+                        <li><a href="https://github.com/TheCreateGM/Haqote-Pad/blob/main/INSTALL.md" target="_blank" rel="noopener noreferrer"><i class="bi bi-download me-1"></i>Installation Guide</a></li>
+                        <li><a href="https://github.com/TheCreateGM/Haqote-Pad/issues" target="_blank" rel="noopener noreferrer"><i class="bi bi-bug me-1"></i>Report Issues</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfl09RzArNM4kR4DlTvz--VtWQ02BWlX4M6LFXSzbbqUq_hFw/viewform" target="_blank" rel="noopener noreferrer"><i class="bi bi-chat-dots me-1"></i>Feedback Form</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4 class="footer-heading">Connect</h4>
-                    <p class="footer-text">Stay updated with the latest developments and features.</p>
+                    <h4 class="footer-heading">Project Info</h4>
+                    <p class="footer-text mb-2"><strong>Started:</strong> August 8, 2025</p>
+                    <p class="footer-text mb-2"><strong>Latest Update:</strong> December 2025</p>
+                    <p class="footer-text mb-3"><strong>Status:</strong> Active Development</p>
+                    <p class="footer-text">
+                        <i class="bi bi-heart-fill text-danger me-1"></i>
+                        Built by <a href="https://github.com/TheCreateGM" target="_blank" rel="noopener noreferrer" style="color: var(--primary-blue-light);">TheCreateGM</a> and team
+                    </p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 HaqotePad. All rights reserved.</p>
+                <p>&copy; 2025 HaqotePad. Open Source Project - Built with ❤️ for better note-taking</p>
                 <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="https://github.com/TheCreateGM/Haqote-Pad/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">License</a>
+                    <a href="https://github.com/TheCreateGM/Haqote-Pad/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer">Security</a>
+                    <a href="https://github.com/TheCreateGM/Haqote-Pad/contributors" target="_blank" rel="noopener noreferrer">Contributors</a>
                 </div>
             </div>
         </div>
@@ -417,11 +712,24 @@
 
     <!-- Back to Top Button -->
     <button class="back-to-top" aria-label="Back to top" id="backToTop">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <i class="bi bi-arrow-up"></i>
     </button>
 
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+    
     <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>

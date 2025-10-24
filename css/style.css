@@ -1,6 +1,14 @@
 /* ========================================
    HaqotePad Landing Page - Main Styles
+   Enhanced with Bootstrap, Tailwind, Foundation, and UIKit
    ======================================== */
+
+/* Framework Compatibility Layer */
+/* Prevent conflicts between multiple CSS frameworks */
+.uk-container,
+.foundation-container {
+    position: relative;
+}
 
 /* CSS Variables - HaqotePad Color Palette */
 :root {

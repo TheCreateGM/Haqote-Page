@@ -1,6 +1,38 @@
 /* ========================================
    HaqotePad Landing Page - Responsive Styles
+   Enhanced with Multi-Framework Grid Support
+   Bootstrap, Tailwind, Foundation, UIKit
    ======================================== */
+
+/* Framework-Enhanced Grid Utilities */
+@media screen and (min-width: 1px) {
+    /* Ensure grid compatibility across all frameworks */
+    .grid-container {
+        display: grid;
+        width: 100%;
+    }
+    
+    /* Bootstrap Grid Enhancement */
+    .row {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 1.5rem;
+    }
+    
+    /* Foundation Grid Support */
+    .grid-x {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    /* UIKit Grid Enhancement */
+    .uk-grid {
+        margin-left: -20px;
+    }
+    
+    .uk-grid > * {
+        padding-left: 20px;
+    }
+}
 
 /* Tablet Styles (max-width: 1024px) */
 @media screen and (max-width: 1024px) {

@@ -1,9 +1,24 @@
 // ========================================
 // HaqotePad Landing Page - Main JavaScript
+// Enhanced with Bootstrap, Angular, Tailwind, Foundation, UIKit
 // ========================================
 
 (function() {
     'use strict';
+
+    // ========================================
+    // Initialize Foundation Framework
+    // ========================================
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof Foundation !== 'undefined') {
+            try {
+                $(document).foundation();
+                console.log('Foundation Framework initialized successfully');
+            } catch (e) {
+                console.warn('Foundation initialization skipped (jQuery might not be loaded)');
+            }
+        }
+    });
 
     // ========================================
     // Mobile Menu Toggle

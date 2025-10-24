@@ -423,8 +423,8 @@
                 <h2 class="section-title">See HaqotePad in Action</h2>
                 <p class="section-subtitle">A glimpse into your future note-taking experience</p>
             </div>
-            <div class="preview-grid">
-                <div class="preview-item main-preview" data-aos="zoom-in">
+            <div class="masonry-grid">
+                <div class="masonry-item masonry-item--large" data-aos="fade-up">
                     <div class="preview-image-container">
                         <img src="images/screenshots/screenshot-main-interface.png" alt="HaqotePad Main Interface" class="preview-image shadow-lg rounded" loading="lazy">
                     </div>
@@ -432,7 +432,7 @@
                     <p class="preview-description">Clean, organized card-based layout with category filtering and search</p>
                 </div>
                 
-                <div class="preview-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="masonry-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="preview-image-container">
                         <img src="images/screenshots/screenshot-ai-assistant.png" alt="HaqotePad AI Assistant" class="preview-image shadow rounded" loading="lazy">
                     </div>
@@ -440,7 +440,7 @@
                     <p class="preview-description">Real-time chat with intelligent insights and summaries</p>
                 </div>
                 
-                <div class="preview-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="masonry-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="preview-image-container">
                         <img src="images/screenshots/screenshot-wiki-links.png" alt="HaqotePad Wiki Links" class="preview-image shadow rounded" loading="lazy">
                     </div>
@@ -448,7 +448,7 @@
                     <p class="preview-description">Connect notes with wiki-style links for better knowledge management</p>
                 </div>
                 
-                <div class="preview-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="masonry-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="preview-image-container">
                         <img src="images/screenshots/screenshot-dark-theme.png" alt="HaqotePad Dark Theme" class="preview-image shadow rounded" loading="lazy">
                     </div>
@@ -559,24 +559,6 @@
             <div class="cta-content" data-aos="fade-up">
                 <h2 class="cta-title">Experience HaqotePad Today</h2>
                 <p class="cta-description">Ready to transform your note-taking experience? Try HaqotePad and discover how native performance and AI can enhance your productivity and creativity.</p>
-                
-                <!-- Quick Start Commands -->
-                <div class="feature-card" style="max-width: 700px; margin: 2rem auto; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
-                    <h4 style="color: white; margin-bottom: 1rem;">
-                        <i class="bi bi-terminal me-2"></i>Quick Start
-                    </h4>
-                    <div style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 0.5rem; font-family: 'Courier New', monospace; text-align: left; color: white;">
-                        <code style="display: block; margin-bottom: 0.5rem;"># Clone the repository</code>
-                        <code style="display: block; margin-bottom: 0.5rem;">git clone https://github.com/TheCreateGM/Haqote-Pad.git</code>
-                        <code style="display: block; margin-bottom: 0.5rem;">cd Haqote-Pad</code>
-                        <code style="display: block; margin-top: 1rem;"># Run with auto-install (recommended)</code>
-                        <code style="display: block;">python noteapp.py</code>
-                    </div>
-                    <p style="color: rgba(255,255,255,0.9); margin-top: 1rem; font-size: 0.95rem;">
-                        <i class="bi bi-info-circle me-2"></i>
-                        All dependencies install automatically on first run!
-                    </p>
-                </div>
                 
                 <div class="cta-buttons">
                     <a href="https://github.com/TheCreateGM/Haqote-Page/releases" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
@@ -718,6 +700,12 @@
     <!-- Bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
+    <!-- Masonry Layout Library -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    
+    <!-- imagesLoaded Library (for Masonry to work with images) -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -727,6 +715,31 @@
             easing: 'ease-in-out',
             once: true,
             offset: 100
+        });
+    </script>
+    
+    <!-- Initialize Masonry -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var masonryGrid = document.querySelector('.masonry-grid');
+            
+            if (masonryGrid) {
+                // Wait for images to load before initializing Masonry
+                imagesLoaded(masonryGrid, function() {
+                    var masonry = new Masonry(masonryGrid, {
+                        itemSelector: '.masonry-item',
+                        columnWidth: '.masonry-item',
+                        percentPosition: true,
+                        gutter: 20,
+                        transitionDuration: '0.3s'
+                    });
+                    
+                    // Re-layout after AOS animations
+                    setTimeout(function() {
+                        masonry.layout();
+                    }, 1000);
+                });
+            }
         });
     </script>
     

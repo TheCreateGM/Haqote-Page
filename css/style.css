@@ -610,15 +610,18 @@ section {
 /* Masonry Grid Layout */
 .masonry-grid {
     margin: 0 auto;
+    max-width: 100%;
 }
 
+/* Grid items - properly sized for Masonry.js */
 .masonry-item {
-    width: calc(33.333% - 14px);
+    width: calc(33.333% - 13.33px); /* (20px gutter * 2/3) */
     margin-bottom: 20px;
     background: var(--color-gray-50);
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    float: left; /* Fallback for browsers without Masonry */
 }
 
 .masonry-item:hover {
@@ -627,7 +630,14 @@ section {
 }
 
 .masonry-item--large {
-    width: calc(66.666% - 10px);
+    width: calc(66.666% - 13.33px); /* (20px gutter * 2/3) */
+}
+
+/* Clearfix for fallback */
+.masonry-grid::after {
+    content: '';
+    display: table;
+    clear: both;
 }
 
 .preview-image-placeholder {

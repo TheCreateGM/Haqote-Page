@@ -724,21 +724,67 @@
             var masonryGrid = document.querySelector('.masonry-grid');
             
             if (masonryGrid) {
-                // Wait for images to load before initializing Masonry
-                imagesLoaded(masonryGrid, function() {
-                    var masonry = new Masonry(masonryGrid, {
-                        itemSelector: '.masonry-item',
-                        columnWidth: '.masonry-item',
-                        percentPosition: true,
-                        gutter: 20,
-                        transitionDuration: '0.3s'
+                var masonryInstance = null;
+                
+                // Function to initialize or re-layout Masonry
+                function initMasonry() {
+                    // Wait for images to load before initializing Masonry
+                    imagesLoaded(masonryGrid, function() {
+                        if (masonryInstance) {
+                            masonryInstance.destroy();
+                        }
+                        
+                        masonryInstance = new Masonry(masonryGrid, {
+                            itemSelector: '.masonry-item',
+                            columnWidth: '.masonry-item',
+                            percentPosition: true,
+                            gutter: 20,
+                            horizontalOrder: true,
+                            fitWidth: false,
+                            transitionDuration: '0.3s',
+                            stagger: 30
+                        });
+                        
+                        // Re-layout after AOS animations
+                        setTimeout(function() {
+                            if (masonryInstance) {
+                                masonryInstance.layout();
+                            }
+                        }, 1000);
+                        
+                        // Additional layout trigger for Firefox
+                        setTimeout(function() {
+                            if (masonryInstance) {
+                                masonryInstance.layout();
+                            }
+                        }, 1500);
                     });
-                    
-                    // Re-layout after AOS animations
-                    setTimeout(function() {
-                        masonry.layout();
-                    }, 1000);
+                }
+                
+                // Initial load
+                initMasonry();
+                
+                // Re-layout on window resize (debounced)
+                var resizeTimer;
+                window.addEventListener('resize', function() {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(function() {
+                        if (masonryInstance) {
+                            masonryInstance.layout();
+                        }
+                    }, 250);
                 });
+                
+                // Re-layout when fonts are loaded (fixes Firefox layout issues)
+                if (document.fonts && document.fonts.ready) {
+                    document.fonts.ready.then(function() {
+                        setTimeout(function() {
+                            if (masonryInstance) {
+                                masonryInstance.layout();
+                            }
+                        }, 100);
+                    });
+                }
             }
         });
     </script>

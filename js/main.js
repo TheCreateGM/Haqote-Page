@@ -1,76 +1,28 @@
 // ========================================
 // HaqotePad Landing Page - Main JavaScript
-// Enhanced with Bootstrap, Angular, Tailwind, Foundation, UIKit
+// Bootstrap 5.3.3 Compatible
 // ========================================
 
 (function() {
     'use strict';
 
     // ========================================
-    // Initialize Foundation Framework
+    // Mobile Menu - Bootstrap handles collapse
+    // Auto-close menu when clicking nav links
     // ========================================
-    document.addEventListener('DOMContentLoaded', function() {
-        if (typeof Foundation !== 'undefined') {
-            try {
-                $(document).foundation();
-                console.log('Foundation Framework initialized successfully');
-            } catch (e) {
-                console.warn('Foundation initialization skipped (jQuery might not be loaded)');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Close navbar on mobile after clicking a link
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: true
+                });
             }
-        }
+        });
     });
-
-    // ========================================
-    // Mobile Menu Toggle
-    // ========================================
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const navLinksItems = document.querySelectorAll('.nav-links a');
-
-    if (mobileMenuToggle && navLinks) {
-        mobileMenuToggle.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navLinks.classList.toggle('active');
-            
-            // Update ARIA attribute
-            const isExpanded = this.classList.contains('active');
-            this.setAttribute('aria-expanded', isExpanded);
-            
-            // Prevent body scroll when menu is open
-            if (isExpanded) {
-                document.body.classList.add('menu-open');
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.classList.remove('menu-open');
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Close menu when clicking on a nav link
-        navLinksItems.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenuToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-                mobileMenuToggle.setAttribute('aria-expanded', 'false');
-                document.body.classList.remove('menu-open');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const isClickInsideNav = navLinks.contains(event.target) || 
-                                    mobileMenuToggle.contains(event.target);
-            
-            if (!isClickInsideNav && navLinks.classList.contains('active')) {
-                mobileMenuToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-                mobileMenuToggle.setAttribute('aria-expanded', 'false');
-                document.body.classList.remove('menu-open');
-                document.body.style.overflow = '';
-            }
-        });
-    }
 
     // ========================================
     // Navbar Scroll Effect
@@ -204,17 +156,8 @@
 
     // ========================================
     // Keyboard Navigation Enhancement
+    // Bootstrap handles Escape key for navbar
     // ========================================
-    document.addEventListener('keydown', function(e) {
-        // Close mobile menu with Escape key
-        if (e.key === 'Escape' && navLinks && navLinks.classList.contains('active')) {
-            mobileMenuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
-            mobileMenuToggle.setAttribute('aria-expanded', 'false');
-            document.body.classList.remove('menu-open');
-            document.body.style.overflow = '';
-        }
-    });
 
     // ========================================
     // Feature Card Hover Effect Enhancement
@@ -350,12 +293,12 @@
     // ========================================
     // Error Handling for Missing Elements
     // ========================================
-    if (!mobileMenuToggle) {
-        console.warn('Mobile menu toggle not found');
-    }
-    
     if (!navbar) {
         console.warn('Navbar not found');
+    }
+    
+    if (!navbarCollapse) {
+        console.warn('Navbar collapse not found');
     }
     
     if (!backToTopButton) {

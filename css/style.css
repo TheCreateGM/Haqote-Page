@@ -231,7 +231,15 @@ button {
     line-height: 1.7;
 }
 
-/* Hero buttons handled by Bootstrap flex utilities */
+.hero-buttons {
+    margin-top: var(--spacing-lg);
+}
+
+.hero-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Hero Card Demo */
 .hero-card-demo {
@@ -416,9 +424,19 @@ button {
 }
 
 /* Section enhancements */
+.section-header {
+    margin-bottom: var(--spacing-3xl);
+}
+
 .section-title {
     color: var(--color-gray-900);
     position: relative;
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-subtitle {
+    color: var(--color-gray-600);
+    font-size: 1.125rem;
 }
 
 /* Features grid handled by Bootstrap row and col classes */

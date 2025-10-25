@@ -15,6 +15,8 @@ HaqotePad is an innovative note-taking application that combines intelligent org
 - **Automated Content**: Intelligent note generation and content expansion
 - **Tag-Based System**: Flexible organization with custom tags
 
+Note: this just a website page not actual app
+
 ## 🎨 Features
 
 This landing page showcases:

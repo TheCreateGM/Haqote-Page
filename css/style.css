@@ -10,6 +10,31 @@
     position: relative;
 }
 
+/* Override framework defaults that might conflict */
+.navbar,
+.nav-content,
+.nav-links,
+.logo {
+    box-sizing: border-box !important;
+}
+
+/* Prevent Bootstrap/Foundation from affecting navbar */
+.navbar .container {
+    max-width: 1280px !important;
+}
+
+/* Fix any overflow issues */
+.navbar,
+.nav-content {
+    overflow: visible;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 /* CSS Variables - HaqotePad Color Palette */
 :root {
     /* Primary Colors */
@@ -165,6 +190,8 @@ button {
     align-items: center;
     justify-content: space-between;
     height: 70px;
+    position: relative;
+    width: 100%;
 }
 
 .logo {
@@ -175,14 +202,25 @@ button {
     font-size: 1.25rem;
     color: var(--color-gray-900);
     transition: transform var(--transition-normal);
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .logo:hover {
     transform: scale(1.05);
 }
 
-.logo i,
 .logo img {
+    flex-shrink: 0;
+    transition: transform var(--transition-normal);
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    object-fit: contain;
+}
+
+.logo i {
     flex-shrink: 0;
     transition: transform var(--transition-normal);
 }
@@ -213,6 +251,10 @@ button {
     flex-direction: column;
     gap: 5px;
     padding: var(--spacing-sm);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
 }
 
 .mobile-menu-toggle span {

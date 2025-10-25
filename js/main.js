@@ -37,7 +37,13 @@
             this.setAttribute('aria-expanded', isExpanded);
             
             // Prevent body scroll when menu is open
-            document.body.style.overflow = isExpanded ? 'hidden' : '';
+            if (isExpanded) {
+                document.body.classList.add('menu-open');
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.classList.remove('menu-open');
+                document.body.style.overflow = '';
+            }
         });
 
         // Close menu when clicking on a nav link
@@ -46,6 +52,7 @@
                 mobileMenuToggle.classList.remove('active');
                 navLinks.classList.remove('active');
                 mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('menu-open');
                 document.body.style.overflow = '';
             });
         });
@@ -59,6 +66,7 @@
                 mobileMenuToggle.classList.remove('active');
                 navLinks.classList.remove('active');
                 mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('menu-open');
                 document.body.style.overflow = '';
             }
         });
@@ -199,10 +207,11 @@
     // ========================================
     document.addEventListener('keydown', function(e) {
         // Close mobile menu with Escape key
-        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+        if (e.key === 'Escape' && navLinks && navLinks.classList.contains('active')) {
             mobileMenuToggle.classList.remove('active');
             navLinks.classList.remove('active');
             mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('menu-open');
             document.body.style.overflow = '';
         }
     });

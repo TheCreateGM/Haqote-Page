@@ -44,14 +44,84 @@ iframe {
         height: 28px !important;
     }
     
+    /* Container adjustments */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
     /* Hero Section */
     .hero {
         padding-top: 80px;
+        padding-bottom: 2rem;
         min-height: auto;
     }
     
     .hero-title {
         font-size: 2rem;
+        line-height: 1.2;
+        word-wrap: break-word;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    /* Section spacing */
+    section {
+        padding: 3rem 0 !important;
+    }
+    
+    .section-title {
+        font-size: 1.75rem !important;
+        word-wrap: break-word;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Features grid */
+    .features-grid .col-12 {
+        padding: 0 0.5rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-title {
+        font-size: 1.25rem;
+    }
+    
+    .feature-description {
+        font-size: 0.9rem;
+    }
+    
+    /* Steps */
+    .step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .step-number {
+        margin: 0 auto 1rem;
+    }
+    
+    /* Native Architecture lists */
+    .native-architecture ul {
+        padding-left: 1rem;
     }
     
     /* Masonry items responsive */
@@ -59,8 +129,45 @@ iframe {
         margin-bottom: 1rem;
     }
     
+    /* CTA section */
     .cta-title {
         font-size: 2rem !important;
+        line-height: 1.2;
+    }
+    
+    .cta-description {
+        font-size: 1rem;
+    }
+    
+    /* Footer */
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-logo {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+    }
+    
+    .footer-bottom-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    /* Carousel */
+    .carousel-caption {
+        display: none !important;
     }
 }
 
@@ -68,6 +175,12 @@ iframe {
 @media screen and (max-width: 480px) {
     html {
         font-size: 14px;
+    }
+    
+    /* Container */
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
     }
     
     /* Logo */
@@ -83,15 +196,61 @@ iframe {
     /* Hero */
     .hero {
         padding-top: 70px;
+        padding-bottom: 1.5rem;
     }
     
     .hero-title {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
     
     /* Demo Card */
     .demo-card {
-        padding: var(--spacing-md);
+        padding: 1rem;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+    }
+    
+    .card-excerpt {
+        font-size: 0.85rem;
+    }
+    
+    /* Sections */
+    section {
+        padding: 2rem 0 !important;
+    }
+    
+    .section-title {
+        font-size: 1.5rem !important;
+        line-height: 1.3;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    /* Feature cards */
+    .feature-card {
+        padding: 1.25rem;
+    }
+    
+    .feature-title {
+        font-size: 1.1rem;
+    }
+    
+    .feature-description {
+        font-size: 0.85rem;
+    }
+    
+    .feature-icon i {
+        font-size: 2rem !important;
     }
     
     /* Step numbers */
@@ -101,9 +260,46 @@ iframe {
         font-size: 1.25rem;
     }
     
+    .step-title {
+        font-size: 1rem;
+    }
+    
+    .step-description {
+        font-size: 0.85rem;
+    }
+    
     /* CTA */
     .cta-title {
-        font-size: 1.75rem !important;
+        font-size: 1.5rem !important;
+        line-height: 1.3;
+    }
+    
+    .cta-description {
+        font-size: 0.9rem;
+    }
+    
+    /* Buttons */
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.65rem 1rem;
+    }
+    
+    .btn-lg {
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+    
+    .footer-description {
+        font-size: 0.85rem;
+    }
+    
+    .footer-text {
+        font-size: 0.85rem;
     }
     
     /* Back to Top */
@@ -249,30 +445,70 @@ iframe {
         font-size: 13px;
     }
     
+    body {
+        overflow-x: hidden;
+    }
+    
     .container {
-        padding: 0 var(--spacing-sm);
+        padding: 0 0.5rem;
+        max-width: 100%;
     }
     
     .hero-title {
-        font-size: 1.75rem;
+        font-size: 1.4rem;
         line-height: 1.2;
+        word-break: break-word;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.85rem;
     }
     
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        word-break: break-word;
+    }
+    
+    .section-subtitle {
+        font-size: 0.85rem;
     }
     
     .btn {
-        font-size: 0.875rem;
-        padding: 0.75rem 1.25rem;
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    .btn-lg {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.1rem;
     }
     
     .logo {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .card-title {
+        font-size: 0.95rem;
+    }
+    
+    .feature-card {
+        padding: 1rem;
+    }
+    
+    .feature-title {
         font-size: 1rem;
+    }
+    
+    .feature-description {
+        font-size: 0.8rem;
+    }
+    
+    .cta-title {
+        font-size: 1.3rem !important;
+    }
+    
+    .footer-heading {
+        font-size: 0.9rem;
     }
 }
 

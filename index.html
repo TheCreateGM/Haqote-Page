@@ -507,61 +507,67 @@
     </section>
 
     <!-- Team & Project Information Section -->
-    <section class="team-section" style="background: var(--color-white); padding: 4rem 0;">
+    <section class="team-section py-5 bg-white">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">👥 Meet the Team</h2>
-                <p class="section-subtitle">Built with passion by a dedicated team of developers</p>
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title display-4 fw-bold mb-3">👥 Meet the Team</h2>
+                <p class="section-subtitle lead text-muted">Built with passion by a dedicated team of developers</p>
             </div>
             
             <!-- Project Info -->
-            <div class="text-center mb-5" data-aos="fade-up">
-                <div class="feature-card" style="max-width: 800px; margin: 0 auto;">
-                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
-                        <i class="bi bi-calendar-check me-2"></i>Project Timeline
-                    </h4>
-                    <p style="color: var(--color-gray-700); font-size: 1.1rem;">
-                        <strong>Started:</strong> August 8, 2025 (Friday)<br>
-                        <strong>Latest Major Update:</strong> October 2025<br>
-                        <strong>Repository:</strong> <a href="https://github.com/TheCreateGM/Haqote-Pad" target="_blank" rel="noopener noreferrer" style="color: var(--primary-blue);">github.com/TheCreateGM/Haqote-Pad</a><br>
-                        <strong>Note:</strong> The project is still in development and may have bugs or limitations. Use at your own risk. Also the project code not publish yet to view.
-                    </p>
+            <div class="row justify-content-center mb-5" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <div class="feature-card text-center">
+                        <h4 class="h5 fw-bold text-primary mb-4">
+                            <i class="bi bi-calendar-check me-2"></i>Project Timeline
+                        </h4>
+                        <div class="row g-3 text-start">
+                            <div class="col-md-6">
+                                <p class="mb-2"><strong>Started:</strong> August 8, 2025 (Friday)</p>
+                                <p class="mb-2"><strong>Latest Update:</strong> October 2025</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="mb-2"><strong>Status:</strong> Active Development</p>
+                                <p class="mb-2"><strong>Repository:</strong> <a href="https://github.com/TheCreateGM/Haqote-Pad" target="_blank" rel="noopener noreferrer" class="text-primary text-decoration-none">github.com/TheCreateGM/Haqote-Pad</a></p>
+                            </div>
+                        </div>
+                        <div class="alert alert-info mt-3 mb-0" role="alert">
+                            <i class="bi bi-info-circle me-2"></i>
+                            <small>The project is still in development and may have bugs or limitations. Use at your own risk.</small>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <div class="row g-4">
                 <!-- Core Team -->
-                <div class="col-12">
-                    <div class="feature-card" data-aos="fade-up">
-                        <h4 style="color: var(--primary-blue); margin-bottom: 1.5rem;">
-                            <i class="bi bi-people-fill me-2"></i>Core Team Members
+                <div class="col-12" data-aos="fade-up">
+                    <div class="feature-card text-center">
+                        <h4 class="h5 fw-bold text-primary mb-4">
+                            <i class="bi bi-people-fill me-2"></i>Core Team Member
                         </h4>
-                        <div class="d-flex flex-wrap gap-3 justify-content-center">
-                            <a href="https://github.com/TheCreateGM" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">
-                                <i class="bi bi-github me-2"></i>TheCreateGM
-                            </a>
-                        </div>
+                        <a href="https://github.com/TheCreateGM" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-lg">
+                            <i class="bi bi-github me-2"></i>TheCreateGM
+                        </a>
                     </div>
                 </div>
                 
                 <!-- Supervisor -->
-                <div class="col-lg-6">
-                    <div class="feature-card h-100" data-aos="fade-right">
-                        <h4 style="color: var(--primary-blue); margin-bottom: 1.5rem;">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="feature-card h-100 text-center">
+                        <h4 class="h5 fw-bold text-success mb-4">
                             <i class="bi bi-person-badge me-2"></i>Project Supervisor
                         </h4>
-                        <div class="text-center">
-                            <a href="https://github.com/rkenshin77" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-lg">
-                                <i class="bi bi-github me-2"></i>rkenshin77
-                            </a>
-                        </div>
+                        <a href="https://github.com/rkenshin77" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-lg">
+                            <i class="bi bi-github me-2"></i>rkenshin77
+                        </a>
                     </div>
                 </div>
                 
                 <!-- Collaborators -->
-                <div class="col-lg-6">
-                    <div class="feature-card h-100" data-aos="fade-left">
-                        <h4 style="color: var(--primary-blue); margin-bottom: 1.5rem;">
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="feature-card h-100 text-center">
+                        <h4 class="h5 fw-bold text-secondary mb-4">
                             <i class="bi bi-star-fill me-2"></i>Collaborators
                         </h4>
                         <div class="d-flex flex-wrap gap-2 justify-content-center">
@@ -591,10 +597,10 @@
                 </div>
             </div>
             
-            <div class="text-center mt-4" data-aos="fade-up">
-                <p style="color: var(--color-gray-600); font-size: 1.1rem;">
+            <div class="text-center mt-5" data-aos="fade-up">
+                <p class="lead">
                     <i class="bi bi-heart-fill text-danger me-2"></i>
-                    <strong>Open Source Project:</strong> Check out our code on <a href="https://github.com/TheCreateGM/Haqote-Pad" target="_blank" rel="noopener noreferrer" style="color: var(--primary-blue);">GitHub</a>
+                    <strong>Open Source Project:</strong> Check out our code on <a href="https://github.com/TheCreateGM/Haqote-Pad" target="_blank" rel="noopener noreferrer" class="text-primary text-decoration-none fw-bold">GitHub</a>
                 </p>
             </div>
         </div>

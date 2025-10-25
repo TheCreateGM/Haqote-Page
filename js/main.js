@@ -317,4 +317,21 @@
         });
     }
 
+    // ========================================
+    // Screenshot Carousel Auto-Cycling (30 seconds)
+    // ========================================
+    const screenshotCarousel = document.getElementById('screenshotCarousel');
+    
+    if (screenshotCarousel) {
+        // Initialize Bootstrap carousel
+        const carousel = new bootstrap.Carousel(screenshotCarousel, {
+            interval: 30000, // 30 seconds
+            wrap: true,      // Loop continuously
+            pause: 'hover',  // Pause on hover
+            ride: 'carousel' // Auto-start
+        });
+        
+        console.log('Screenshot carousel initialized with 30-second auto-cycling');
+    }
+
 })();

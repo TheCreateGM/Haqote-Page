@@ -2,7 +2,21 @@
    HaqotePad Landing Page - Responsive Styles
    Enhanced with Multi-Framework Grid Support
    Bootstrap, Tailwind, Foundation, UIKit
+   Optimized for all devices and resolutions
    ======================================== */
+
+/* Base Responsive Utilities */
+* {
+    box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 /* Framework-Enhanced Grid Utilities */
 @media screen and (min-width: 1px) {
@@ -31,6 +45,30 @@
     
     .uk-grid > * {
         padding-left: 20px;
+    }
+    
+    /* Responsive Container */
+    .container {
+        width: 100%;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Large Tablet / Small Desktop (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+    .container {
+        padding-left: var(--spacing-lg);
+        padding-right: var(--spacing-lg);
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.25rem;
     }
 }
 
@@ -71,6 +109,12 @@
     
     .footer-content {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    /* Improve button sizes for touch */
+    .btn {
+        padding: 0.875rem 1.75rem;
+        font-size: 1rem;
     }
 }
 
@@ -270,14 +314,19 @@
     }
 }
 
-/* Mobile Portrait (max-width: 480px) */
+/* Small Mobile (max-width: 480px) */
 @media screen and (max-width: 480px) {
     html {
         font-size: 14px;
     }
     
     .container {
-        padding: 0 var(--spacing-sm);
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* Improve text readability */
+    p {
+        line-height: 1.7;
     }
     
     /* Navigation */
@@ -630,5 +679,151 @@
 @media screen and (min-width: 1920px) {
     .container {
         max-width: 1600px;
+    }
+}
+
+/* Extra Small Devices (max-width: 360px) */
+@media screen and (max-width: 360px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+        line-height: 1.2;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        font-size: 0.875rem;
+        padding: 0.75rem 1.25rem;
+    }
+    
+    .logo {
+        font-size: 1rem;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+    }
+}
+
+/* Flexible Images & Media */
+@media screen and (max-width: 768px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .preview-image {
+        object-fit: cover;
+    }
+}
+
+/* Orientation-Specific Optimizations */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        padding: 60px 0 30px;
+    }
+    
+    section {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+/* High DPI Displays (Retina) */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi) {
+    /* Ensure crisp images on high-DPI displays */
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Container Queries Support (Progressive Enhancement) */
+@supports (container-type: inline-size) {
+    .feature-card {
+        container-type: inline-size;
+    }
+    
+    @container (max-width: 300px) {
+        .feature-title {
+            font-size: 1.125rem;
+        }
+    }
+}
+
+/* Flexible Grid Fallbacks */
+@supports not (display: grid) {
+    .features-grid,
+    .feedback-content,
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
+    }
+    
+    .feature-card,
+    .feedback-info,
+    .footer-section {
+        flex: 1 1 300px;
+    }
+}
+
+/* Safe Area Insets (iOS Notch Support) */
+@supports (padding: max(0px)) {
+    .container {
+        padding-left: max(var(--spacing-lg), env(safe-area-inset-left));
+        padding-right: max(var(--spacing-lg), env(safe-area-inset-right));
+    }
+    
+    .navbar {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+}
+
+/* Improve Readability on All Devices */
+@media screen and (max-width: 768px) {
+    body {
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+}
+
+/* Ensure clickable elements are accessible */
+@media (pointer: coarse) {
+    a,
+    button,
+    .btn,
+    .card-tag,
+    .nav-links a {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Reduce animations on low-end devices */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
     }
 }
